@@ -1,7 +1,3 @@
-//
-// Created by minyu on 2023/5/29.
-//
-
 #include "DNSRootServer.h"
 static char *path = "RootCache.txt";
 
@@ -306,7 +302,7 @@ int DNS_tcp()
 
     struct sockaddr_in server_sockaddr; // 一般是储存地址和端口，用于信息的显示及存储作用
     server_sockaddr.sin_family = AF_INET;
-    server_sockaddr.sin_port = htons(9944);              // 将一个无符号短整型数值转换为网络字节序，即大端模式
+    server_sockaddr.sin_port = htons(DNS_SERVER_PORT);              // 将一个无符号短整型数值转换为网络字节序，即大端模式
     //server_sockaddr.sin_addr.s_addr =htonl(INADDR_ANY);
     server_sockaddr.sin_addr.s_addr = inet_addr(DNS_ROOT_ADDRESS);
 

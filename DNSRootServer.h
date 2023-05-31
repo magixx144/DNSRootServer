@@ -1,7 +1,6 @@
 //
-// Created by minyu on 2023/5/29.
+// Created by minyu on 2023/5/21.
 //
-
 
 //#include <winsock2.h>
 //#include <ws2tcpip.h>
@@ -25,7 +24,7 @@
 #define TYPE_MX 0x0f
 #define CLASS_IN 0x01
 #define MESSAGE_LEN 1024
-#define DNS_SERVER_PORT 9946
+#define DNS_SERVER_PORT 53
 #define DNS_SERVER_IP "8.8.8.8"
 #define LOCAL_DNS_ADDRESS "127.0.0.2"
 #define DNS_ROOT_ADDRESS "127.0.0.3"
@@ -77,4 +76,3 @@ int DNS_header_create(struct DNS_Header *header);
 int DNS_query_create(struct DNS_Query *query, char *domain, unsigned short type);
 int DNS_build(struct DNS_Header *header, struct DNS_Query *query, struct DNS_RR *answer, char *response);
 int DNS_tcp();
-
